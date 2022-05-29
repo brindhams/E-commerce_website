@@ -18,9 +18,9 @@ class Addproduct(db.Model):
     category = db.relationship('Category',backref=db.backref('posts', lazy=True))
     
 
-    # image_1 = db.Column(db.String(150), nullable=False, default='image.jpg')
-    # image_2 = db.Column(db.String(150), nullable=False, default='image.jpg')
-    # image_3 = db.Column(db.String(150), nullable=False, default='image.jpg')
+    image_1 = db.Column(db.String(150), nullable=False, default='image.jpg')
+    image_2 = db.Column(db.String(150), nullable=False, default='image.jpg')
+    image_3 = db.Column(db.String(150), nullable=False, default='image.jpg')
 
     
     def __repr__(self):
