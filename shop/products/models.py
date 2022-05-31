@@ -12,8 +12,10 @@ class Addproduct(db.Model):
     colors = db.Column(db.Text, nullable=False)
     desc = db.Column(db.Text, nullable=False)
     pub_date = db.Column(db.DateTime, nullable=False,default=datetime.utcnow)
+    
     brand_id = db.Column(db.Integer, db.ForeignKey('brand.id'),nullable=False)
     brand = db.relationship('Brand',backref=db.backref('brands', lazy=True))
+    
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'),nullable=False)
     category = db.relationship('Category',backref=db.backref('posts', lazy=True))
     
